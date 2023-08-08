@@ -3,10 +3,12 @@ import { Box, Link } from "../../constants/mui.constants";
 import { linkStyles, List } from "./header.style";
 
 const Header = () => {
+
+
   return (
     <Box component={"section"}>
         <Box component={"header"}>
-          <Box component={"nav"} sx={{padding:"3em"}}>
+          <Box component={"nav"} sx={{padding:"3em 5em"}}>
             <List>
               <Link sx={linkStyles} href="#">
                 <Box component={"li"}>Home</Box>
@@ -27,6 +29,11 @@ const Header = () => {
               <Link sx={linkStyles} href="#">
                 <Box component={"li"}>Contact</Box>
               </Link>
+
+              <Link sx={linkStyles} href="#">
+                <Box component={"li"}>Projects</Box>
+              </Link>
+
             </List>
           </Box>
         </Box>

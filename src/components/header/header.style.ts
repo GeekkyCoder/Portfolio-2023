@@ -18,4 +18,5 @@ export const CenterContainer = styled(Box)`
 export const List = styled('ul')` 
    display: flex;
    justify-content: space-between;
+   width: 80%;
 `
