@@ -7,6 +7,7 @@ import { Box } from "../../constants/mui.constants";
 
 import LandingPageSvg from "../../assets/landing-bg.svg";
 import { CenterContainer } from "../../components/header/header.style";
+import SkillsPage from "../skills/skills.page";
 
 const LandingPage = () => {
   const [shouldApplyBackground, setShouldApplyBackground] =
@@ -33,12 +34,12 @@ const LandingPage = () => {
     <>
       <Box
         component={"main"}
+        className="landing-page"
         sx={{
           backgroundImage: `url(${LandingPageSvg})`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
-          // height:"1000px"
         }}
       >
         <Box
@@ -51,12 +52,20 @@ const LandingPage = () => {
             transition: "all ease-in-out 300ms",
           }}
         >
+          <CenterContainer>
           <HeaderPage />
+          </CenterContainer>
         </Box>
 
         <CenterContainer>
           <AboutPage />
         </CenterContainer>
+
+
+        <CenterContainer>
+          <SkillsPage/>
+        </CenterContainer>
+
       </Box>
     </>
   );

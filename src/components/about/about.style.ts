@@ -1,4 +1,4 @@
-import { Box, Button, styled } from "../../constants/mui.constants";
+import { Box, Button, Typography, styled } from "../../constants/mui.constants";
 
 export const NameTextStyles = {
   fontWeight: 800,
@@ -18,7 +18,7 @@ export const AboutText = {
 export const AboutFlexBoxMainTextStyles = {
   color: "#F44336",
   fontFamily: "League Spartan",
-  fontSize: "2rem",
+  fontSize: "3rem",
   fontWeight: 700,
 };
 
@@ -72,3 +72,4 @@ export const CVButton = styled(Button)`
     color: whitesmoke;
   }
 `;
+

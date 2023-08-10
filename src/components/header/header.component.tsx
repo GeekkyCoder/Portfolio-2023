@@ -3,40 +3,49 @@ import { Box, Link } from "../../constants/mui.constants";
 import { linkStyles, List } from "./header.style";
 
 const Header = () => {
-
-
   return (
     <Box component={"section"}>
-        <Box component={"header"}>
-          <Box component={"nav"} sx={{padding:"3em 5em"}}>
-            <List>
+      <Box component={"header"}>
+        <Box component={"nav"} sx={{ padding: "2em 0" }}>
+          <List>
+            <Box component={"li"}>
               <Link sx={linkStyles} href="#">
-                <Box component={"li"}>Home</Box>
+                Home
               </Link>
+            </Box>
 
+            <Box component={"li"}>
               <Link sx={linkStyles} href="#">
-                <Box component={"li"}>About</Box>
+                About
               </Link>
+            </Box>
 
+            <Box component={"li"}>
               <Link sx={linkStyles} href="#">
-                <Box component={"li"}>Skills</Box>
+                Skills
               </Link>
+            </Box>
 
+            <Box component={"li"}>
               <Link sx={linkStyles} href="#">
-                <Box component={"li"}>Experience</Box>
+                Experience
               </Link>
+            </Box>
 
+            <Box component={"li"}>
               <Link sx={linkStyles} href="#">
-                <Box component={"li"}>Contact</Box>
+                Projects
               </Link>
+            </Box>
 
+            <Box component={"li"}>
               <Link sx={linkStyles} href="#">
-                <Box component={"li"}>Projects</Box>
+                Contact
               </Link>
-
-            </List>
-          </Box>
+            </Box>
+          </List>
         </Box>
+      </Box>
     </Box>
   );
 };

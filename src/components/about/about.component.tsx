@@ -27,7 +27,7 @@ const About = () => {
   return (
     <Box
       component={"section"}
-      style={{ color: "white", padding: "3em 5em", margin: "2em 0" }}
+      style={{ color: "white", margin: "2em 0" }}
     >
       <Typography
         variant="h2"
@@ -74,7 +74,7 @@ const About = () => {
         </SocialFlexItem>
       </SocialFlexContainer>
 
-      <Box sx={{ marginTop: "20em", marginLeft: "5em" }}>
+      <Box sx={{ marginTop: "25em", marginLeft: "5em" }}>
         <AboutFlexBox>
           <Box sx={{ position: "absolute", top: "-10rem", left: "-3rem" }}>
             <Scroll />
@@ -101,10 +101,11 @@ const About = () => {
           <AboutFlexItemRight>
             <Typography
               variant="h3"
-              component={"p"}
+              // sx={{'&.MuiTypography-h3': {color:"red"} }}
+              component={"h1"}
               sx={AboutFlexBoxMainTextStyles}
             >
-              About Me
+              About Me.
             </Typography>
 
             <Typography mt={"1em"} component={"p"} sx={AboutFlexBoxTextStyles}>

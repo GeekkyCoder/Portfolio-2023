@@ -1,5 +1,11 @@
+import { Box } from "../../constants/mui.constants";
+
 const Skills = () => {
-    return (
-        Skills
-    )
-}
+  return (
+     <Box>
+       Skills
+     </Box>
+  );
+};
+
+export default Skills;

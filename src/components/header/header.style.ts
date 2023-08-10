@@ -11,8 +11,7 @@ export const linkStyles = {
 export const CenterContainer = styled(Box)`
    width: 100%;
    max-width: 1000px;
-   margin-top: "2em";
-   border:"2px solid red"
+   padding: 2em;
 `
 
 export const List = styled('ul')` 
