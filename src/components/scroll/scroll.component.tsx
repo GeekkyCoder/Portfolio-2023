@@ -9,11 +9,10 @@ const Scroll = () => {
         fontSize={"12px"}
         display={"flex"}
         alignItems={"center"}
-        fontFamily={"League Spartan"}
-        color={"#928A97"}
+        color={"#000C24"}
       >
         <Arrow className="bounce" />
-        <Typography ml={".5em"} component={"span"}>
+        <Typography fontWeight={400} fontFamily={"League Spartan"} ml={".5em"} component={"span"}>
           scroll
         </Typography>
       </Box>

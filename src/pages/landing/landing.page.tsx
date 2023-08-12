@@ -7,7 +7,8 @@ import { Box } from "../../constants/mui.constants";
 
 import LandingPageSvg from "../../assets/landing-bg.svg";
 import { CenterContainer } from "../../components/header/header.style";
-import SkillsPage from "../skills/skills.page";
+import SkillsPage from "./skills/skills.page";
+import ExperiencePage from "./experience/experiene.page";
 
 const LandingPage = () => {
   const [shouldApplyBackground, setShouldApplyBackground] =
@@ -15,7 +16,7 @@ const LandingPage = () => {
 
   useEffect(() => {
     const handleScroll = (): void => {
-      let scrolledY:number = window.scrollY;
+      let scrolledY: number = window.scrollY;
       if (scrolledY > 200) {
         setShouldApplyBackground(true);
       } else {
@@ -36,10 +37,20 @@ const LandingPage = () => {
         component={"main"}
         className="landing-page"
         sx={{
-          backgroundImage: `url(${LandingPageSvg})`,
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
+          position:"relative",
+          "::before": {
+            content: '""',
+            backgroundImage: `url(${LandingPageSvg})`,
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "contain",
+            backgroundSize: "cover",
+            height: "1200px",
+            width: "100%",
+            position: "absolute",
+            top: "0",
+            left: "0",
+            zIndex: "-1",
+          },
         }}
       >
         <Box
@@ -53,7 +64,7 @@ const LandingPage = () => {
           }}
         >
           <CenterContainer>
-          <HeaderPage />
+            <HeaderPage />
           </CenterContainer>
         </Box>
 
@@ -61,11 +72,13 @@ const LandingPage = () => {
           <AboutPage />
         </CenterContainer>
 
+        {/* <CenterContainer>
+          <SkillsPage />
+        </CenterContainer> */}
 
         <CenterContainer>
-          <SkillsPage/>
+           <ExperiencePage/>
         </CenterContainer>
-
       </Box>
     </>
   );

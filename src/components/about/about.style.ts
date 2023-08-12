@@ -23,10 +23,11 @@ export const AboutFlexBoxMainTextStyles = {
 };
 
 export const AboutFlexBoxTextStyles = {
-  color: "#000C24",
-  fontSize: "1.2rem",
-  lineHeight: "30px",
-  letterSpacing: "1px",
+  color:"#000C24",
+  fontFamily:"League Spartan",
+  fontSize:"1.5rem",
+  margin:"1em 0",
+  fontWeight:300,
 };
 
 export const SocialFlexContainer = styled(Box)`

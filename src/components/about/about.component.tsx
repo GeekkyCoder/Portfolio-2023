@@ -27,7 +27,7 @@ const About = () => {
   return (
     <Box
       component={"section"}
-      style={{ color: "white", margin: "2em 0" }}
+      style={{ color: "white", margin: "5em 0", marginBottom: "2em" }}
     >
       <Typography
         variant="h2"
@@ -74,7 +74,7 @@ const About = () => {
         </SocialFlexItem>
       </SocialFlexContainer>
 
-      <Box sx={{ marginTop: "25em", marginLeft: "5em" }}>
+      <Box sx={{ marginTop: "18em", marginLeft: "5em" }}>
         <AboutFlexBox>
           <Box sx={{ position: "absolute", top: "-10rem", left: "-3rem" }}>
             <Scroll />
@@ -110,11 +110,21 @@ const About = () => {
 
             <Typography mt={"1em"} component={"p"} sx={AboutFlexBoxTextStyles}>
               An inquisitive{" "}
-              <Typography fontWeight={600} color={"#F44336"} component={"span"}>
+              <Typography
+                fontWeight={600}
+                fontFamily={"inherit"}
+                color={"#F44336"}
+                component={"span"}
+              >
                 Computer Science
               </Typography>{" "}
               graduate and a passionate{" "}
-              <Typography fontWeight={600} color={"#F44336"} component={"span"}>
+              <Typography
+                fontWeight={600}
+                fontFamily={"inherit"}
+                color={"#F44336"}
+                component={"span"}
+              >
                 Full Stack Mern Web Developer
               </Typography>
               , always eager to learn new technologies and research about new
