@@ -1,3 +1,5 @@
-import { Box, Container,styled,Link,Typography,Button,Stepper,StepLabel,Step,StepContent } from "@mui/material";
+import { Box, Container,styled,Link,Typography,Button,Stepper,StepLabel,Step,StepContent,Avatar } from "@mui/material";
 
-export { Box, Container,styled,Link, Typography,Button,Stepper,StepLabel,Step,StepContent };
+import {ArrowCircleDownOutlined,ArrowCircleUpOutlined} from "@mui/icons-material"
+
+export { Box, Container,styled,Link, Typography,Button,Stepper,StepLabel,Step,StepContent,ArrowCircleDownOutlined,ArrowCircleUpOutlined,Avatar };

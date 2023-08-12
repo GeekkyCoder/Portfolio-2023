@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import {
   Box,
   Typography,
@@ -5,14 +7,26 @@ import {
   StepLabel,
   StepContent,
   Step,
+  Avatar,
+  ArrowCircleUpOutlined,
+  ArrowCircleDownOutlined,
 } from "../../../constants/mui.constants";
 
-import { steps } from "./data";
+import { steps, Steps } from "./data";
 
 const VerticalStepper = () => {
+  const [contentSteps, setContentSteps] = useState<Steps[]>(steps);
+
+  const toggleShow = (id: number) => {
+    setContentSteps((prevContentSteps) => {
+      return prevContentSteps.map((step) => {
+        return step.id === id ? { ...step, show: !step.show } : step;
+      });
+    });
+  };
 
   return (
-    <Box >
+    <Box>
       <Stepper
         orientation="vertical"
         sx={{
@@ -25,10 +39,28 @@ const VerticalStepper = () => {
           "& .MuiStepIcon-text": { fill: "none" },
         }}
       >
-        {steps.map((step, index) => (
-          <Step active expanded key={step.label}>
+        {contentSteps.map((step, index) => (
+          <Step active expanded key={step.label} sx={{ position: "relative" }}>
             <StepLabel>{step?.label}</StepLabel>
-            <StepContent>
+            <Box sx={{ position: "absolute", top: "1rem", left: "40rem" }}>
+              {step?.show ? (
+                <Avatar sx={{ bgcolor: "#F44336" }}>
+                  {" "}
+                  <ArrowCircleUpOutlined
+                    onClick={() => toggleShow(step.id)}
+                  />{" "}
+                </Avatar>
+              ) : (
+                <Avatar sx={{ bgcolor: "#F44336" }}>
+                  {" "}
+                  <ArrowCircleDownOutlined
+                    onClick={() => toggleShow(step.id)}
+                  />{" "}
+                </Avatar>
+              )}
+            </Box>
+
+            <StepContent sx={{ display: `${step.show ? "block" : "none"}` }}>
               <Box
                 sx={{
                   display: "flex",
