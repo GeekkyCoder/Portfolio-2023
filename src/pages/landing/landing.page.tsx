@@ -7,7 +7,7 @@ import { Box } from "../../constants/mui.constants";
 
 import LandingPageSvg from "../../assets/landing-bg.svg";
 import { CenterContainer } from "../../components/header/header.style";
-import SkillsPage from "./skills/skills.page";
+// import SkillsPage from "./skills/skills.page";
 import ExperiencePage from "./experience/experiene.page";
 
 const LandingPage = () => {
@@ -76,9 +76,9 @@ const LandingPage = () => {
           <SkillsPage />
         </CenterContainer> */}
 
-        <CenterContainer>
+        {/* <CenterContainer> */}
            <ExperiencePage/>
-        </CenterContainer>
+        {/* </CenterContainer> */}
       </Box>
     </>
   );
