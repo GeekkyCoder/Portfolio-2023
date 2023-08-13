@@ -34,9 +34,10 @@ const SkillTabs = () => {
             sx={{
               "& .MuiTab-root": {
                 fontFamily: "League Spartan",
-                fontSize: ".8rem",
-                fontWeight: 600,
+                fontSize: "1.2rem",
+                fontWeight: 300,
                 color: "#000C24",
+                textTransform:"capitalize",
               },
               "& .MuiTab-root.Mui-selected": { color: "#F44336" },
               "& .MuiTabs-indicator": {

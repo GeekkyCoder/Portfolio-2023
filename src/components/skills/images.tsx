@@ -15,6 +15,8 @@ import {ReactComponent as Typescript } from "../../assets/skills/typescript.svg"
 import {ReactComponent as Materialui } from "../../assets/skills/material ui.svg"
 import {ReactComponent as RTK } from "../../assets/skills/react-testing-library.svg"
 import {ReactComponent as RestApi } from "../../assets/skills/rest-api.svg"
+import {ReactComponent as CICD } from "../../assets/skills/ci-cd.svg"
+
 
 
 
@@ -36,4 +38,5 @@ export {
     Mongodb,
     RTK,
     RestApi,
+    CICD
 }
