@@ -15,7 +15,7 @@ import {
 
 const Frontend = () => {
   return (
-    <Box sx={{ display: "flex", flexWrap: "wrap", alignItems: "center" }}>
+    <Box className='fade' sx={{ display: "flex", flexWrap: "wrap", alignItems: "center" }}>
       <HTML
         width={"80px"}
         height={"80px"}
