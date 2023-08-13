@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 import {
   Box,
@@ -17,13 +17,13 @@ import { steps, Steps } from "./data";
 const VerticalStepper = () => {
   const [contentSteps, setContentSteps] = useState<Steps[]>(steps);
 
-  const toggleShow = (id: number) => {
+  const toggleShow = useCallback((id: number) => {
     setContentSteps((prevContentSteps) => {
       return prevContentSteps.map((step) => {
         return step.id === id ? { ...step, show: !step.show } : step;
       });
     });
-  };
+  },[contentSteps]);
 
   return (
     <Box>
@@ -39,7 +39,7 @@ const VerticalStepper = () => {
           "& .MuiStepIcon-text": { fill: "none" },
         }}
       >
-        {contentSteps.map((step, index) => (
+        {contentSteps.map((step) => (
           <Step active expanded key={step.label} sx={{ position: "relative" }}>
             <StepLabel>{step?.label}</StepLabel>
             <Box sx={{ position: "absolute", top: "1rem", left: "40rem" }}>
@@ -60,7 +60,7 @@ const VerticalStepper = () => {
               )}
             </Box>
 
-            <StepContent sx={{ display: `${step.show ? "block" : "none"}` }}>
+            <StepContent className="fade" sx={{ display: `${step.show ? "block" : "none"}` }}>
               <Box
                 sx={{
                   display: "flex",

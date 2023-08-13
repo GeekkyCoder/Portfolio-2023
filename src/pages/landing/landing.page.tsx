@@ -7,7 +7,7 @@ import { Box } from "../../constants/mui.constants";
 
 import LandingPageSvg from "../../assets/landing-bg.svg";
 import { CenterContainer } from "../../components/header/header.style";
-// import SkillsPage from "./skills/skills.page";
+import SkillsPage from "./skills/skills.page";
 import ExperiencePage from "./experience/experiene.page";
 
 const LandingPage = () => {
@@ -37,7 +37,7 @@ const LandingPage = () => {
         component={"main"}
         className="landing-page"
         sx={{
-          position:"relative",
+          position: "relative",
           "::before": {
             content: '""',
             backgroundImage: `url(${LandingPageSvg})`,
@@ -72,13 +72,11 @@ const LandingPage = () => {
           <AboutPage />
         </CenterContainer>
 
-        {/* <CenterContainer>
-          <SkillsPage />
-        </CenterContainer> */}
+        <ExperiencePage />
 
-        {/* <CenterContainer> */}
-           <ExperiencePage/>
-        {/* </CenterContainer> */}
+    
+          <SkillsPage />
+     
       </Box>
     </>
   );
