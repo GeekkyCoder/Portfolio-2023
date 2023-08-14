@@ -1,9 +1,5 @@
 import { Box, Typography } from "../../constants/mui.constants";
 
-import { ReactComponent as TwitterIcon } from "../../assets/ant-design_twitter-circle-filled.svg";
-import { ReactComponent as GithubIcon } from "../../assets/ant-design_github-filled.svg";
-import { ReactComponent as LinkedInIcon } from "../../assets/entypo-social_linkedin-with-circle.svg";
-
 import { Link } from "../about/about.style";
 
 import { GitHub, LinkedIn, Twitter } from "../../constants/mui.constants";

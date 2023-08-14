@@ -1,4 +1,4 @@
-import { Box, Button, Typography, styled } from "../../constants/mui.constants";
+import { Box, Button,styled } from "../../constants/mui.constants";
 
 export const NameTextStyles = {
   fontWeight: 800,
@@ -69,7 +69,7 @@ export const CVButton = styled(Button)`
   background-color: #000c24;
   margin: 2em 0;
   :hover {
-    background-color: #000c24;
+    background-color: #F44336;
     color: whitesmoke;
   }
 `;

@@ -124,32 +124,21 @@ const About = () => {
             </Typography>
 
             <Typography mt={"1em"} component={"p"} sx={AboutFlexBoxTextStyles}>
-              An inquisitive{" "}
-              <Typography
-                fontWeight={600}
-                fontFamily={"inherit"}
-                color={"#F44336"}
-                component={"span"}
-              >
-                Computer Science
-              </Typography>{" "}
-              graduate and a passionate{" "}
-              <Typography
-                fontWeight={600}
-                fontFamily={"inherit"}
-                color={"#F44336"}
-                component={"span"}
-              >
-                Full Stack Mern Web Developer
-              </Typography>
-              , Always eager to learn new technologies and research about new
-              technologies, having 1.5 year of experience with web development ,
-              I learnt a ton of new frameworks and libraries and eventually used
-              them in my each projects, i can adopt and learn new things
-              quickly!
+              An inquisitive Computer Science graduate and a passionate Full
+              Stack Mern Web Developer , Always eager to learn new technologies
+              and research about new technologies, having 1.5 year of experience
+              with web development , I learnt a ton of new frameworks and
+              libraries and eventually used them in my each projects, i can
+              adopt and learn new things quickly!
             </Typography>
 
-            <CVButton variant="contained">Download CV</CVButton>
+            <Link
+              href="https://drive.google.com/file/d/1Q16S9GiFI4fIdX6Ijb1pJqOr2RzoXWR1/view?usp=drive_link"
+              download={"./Full Stack Web Developer.pdf"}
+              target="__blank"
+            >
+              <CVButton variant="contained">Download CV</CVButton>
+            </Link>
           </AboutFlexItemRight>
         </AboutFlexBox>
 

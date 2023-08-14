@@ -10,7 +10,7 @@ const Header = () => {
   const [activeLink, setActiveLink] = useState<number>(1);
 
   const handleActiveLinkClick = (
-    e: React.MouseEvent<HTMLAnchorElement>,
+    _event: React.MouseEvent<HTMLAnchorElement>,
     current: number
   ) => {
     setActiveLink(current);
@@ -43,7 +43,7 @@ const Header = () => {
                 }}
               >
                 <Link
-                  sx={linkStyles}
+                  sx={{ ...linkStyles, ":hover": { color: "#F44336" } }}
                   href="#Home"
                   onClick={(e) => handleActiveLinkClick(e, 1)}
                 >
@@ -74,7 +74,7 @@ const Header = () => {
                 }}
               >
                 <Link
-                  sx={linkStyles}
+                  sx={{ ...linkStyles, ":hover": { color: "#F44336" } }}
                   href="#About"
                   onClick={(e) => handleActiveLinkClick(e, 2)}
                 >
@@ -105,7 +105,7 @@ const Header = () => {
                 }}
               >
                 <Link
-                  sx={linkStyles}
+                  sx={{ ...linkStyles, ":hover": { color: "#F44336" } }}
                   href="#Skills"
                   onClick={(e) => handleActiveLinkClick(e, 3)}
                 >
@@ -136,7 +136,7 @@ const Header = () => {
                 }}
               >
                 <Link
-                  sx={linkStyles}
+                  sx={{ ...linkStyles, ":hover": { color: "#F44336" } }}
                   href="#Experience"
                   onClick={(e) => handleActiveLinkClick(e, 4)}
                 >
@@ -167,7 +167,7 @@ const Header = () => {
                 }}
               >
                 <Link
-                  sx={linkStyles}
+                  sx={{ ...linkStyles, ":hover": { color: "#F44336" } }}
                   href="#Projects"
                   onClick={(e) => handleActiveLinkClick(e, 5)}
                 >

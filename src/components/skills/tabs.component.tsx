@@ -1,5 +1,5 @@
+import * as React from 'react';
 import { useState } from "react";
-
 import Frontend from "./frontend.component";
 import Backend from "./backend.component";
 import Testing from "./testing.component";
@@ -18,7 +18,7 @@ import Scroll from "../scroll/scroll.component";
 const SkillTabs = () => {
   const [value, setValue] = useState<string>("1");
 
-  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+  const handleChange = (_event: React.SyntheticEvent, newValue: string):void => {
     setValue(newValue);
   };
 
