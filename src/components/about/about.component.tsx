@@ -27,6 +27,7 @@ import Scroll from "../scroll/scroll.component";
 const About = () => {
   return (
     <Box
+      id="About"
       component={"section"}
       style={{ color: "white", margin: "5em 0", marginBottom: "2em" }}
     >

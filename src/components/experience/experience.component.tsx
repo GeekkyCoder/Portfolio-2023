@@ -9,6 +9,7 @@ const Experience = () => {
   return (
     <Box
       ml="2em"
+      id="Experience"
       sx={{
         position: "relative",
         "::before": {

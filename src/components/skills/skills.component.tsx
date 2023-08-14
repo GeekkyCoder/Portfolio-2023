@@ -6,7 +6,7 @@ import {ReactComponent as Frame} from "../../assets/frame.svg"
 
 const Skills = () => {
   return (
-    <Box ml={"2em"} my={"5em"} width={"90%"} maxWidth={"1200px"}>
+    <Box ml={"2em"} my={"5em"} width={"90%"} maxWidth={"1200px"} id="Skills">
       <Typography
         m={"0"}
         fontFamily={"League Spartan"}

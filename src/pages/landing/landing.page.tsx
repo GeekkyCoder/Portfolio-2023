@@ -38,6 +38,7 @@ const LandingPage = () => {
       <Box
         component={"main"}
         className="landing-page"
+        id="Home"
         sx={{
           position: "relative",
           "::before": {
@@ -81,7 +82,7 @@ const LandingPage = () => {
         <ProjectsPage />
 
         <FooterPage />
-        
+
       </Box>
     </>
   );

@@ -19,7 +19,7 @@ import Scroll from "../scroll/scroll.component";
 const Projects = () => {
   return (
     <>
-      <Box ml="2em" maxWidth={"1200px"}>
+      <Box ml="2em" maxWidth={"1200px"} id="Projects">
         <Typography
           m={"0"}
           fontFamily={"League Spartan"}
