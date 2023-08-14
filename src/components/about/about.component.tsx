@@ -18,6 +18,7 @@ import Typewriter from "typewriter-effect";
 import { ReactComponent as TwitterIcon } from "../../assets/ant-design_twitter-circle-filled.svg";
 import { ReactComponent as GithubIcon } from "../../assets/ant-design_github-filled.svg";
 import { ReactComponent as LinkedinIcon } from "../../assets/entypo-social_linkedin-with-circle.svg";
+import { ReactComponent as HackerRank } from "../../assets/hackerrank.svg";
 
 import { ReactComponent as Frame } from "../../assets/frame.svg";
 
@@ -70,6 +71,19 @@ const About = () => {
             target="__blank"
           >
             <LinkedinIcon />
+          </Link>
+        </SocialFlexItem>
+
+        <SocialFlexItem>
+          <Link
+            href="https://www.hackerrank.com/geekkycoder?hr_r=1"
+            target="__blank"
+          >
+            <HackerRank
+              width={"40px"}
+              height={"40px"}
+              style={{ borderRadius: "50%", filter: "grayscale(100%)" }}
+            />
           </Link>
         </SocialFlexItem>
       </SocialFlexContainer>
@@ -127,7 +141,7 @@ const About = () => {
               >
                 Full Stack Mern Web Developer
               </Typography>
-              , always eager to learn new technologies and research about new
+              , Always eager to learn new technologies and research about new
               technologies, having 1.5 year of experience with web development ,
               I learnt a ton of new frameworks and libraries and eventually used
               them in my each projects, i can adopt and learn new things

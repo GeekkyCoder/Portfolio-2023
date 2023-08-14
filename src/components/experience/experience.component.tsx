@@ -23,7 +23,6 @@ const Experience = () => {
           top: "-10rem",
           left: "0",
           zIndex: "-2000",
-          opacity: ".7",
         },
       }}
     >
@@ -38,7 +37,7 @@ const Experience = () => {
           Over 2 Years Of Experience
         </Typography>
         <VerticalStepper />
-        <Box my="2em">
+        <Box mt="5em">
           <Scroll />
         </Box>
       </Box>

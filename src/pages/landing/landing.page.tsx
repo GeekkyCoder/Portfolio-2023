@@ -9,6 +9,8 @@ import LandingPageSvg from "../../assets/landing-bg.svg";
 import { CenterContainer } from "../../components/header/header.style";
 import SkillsPage from "./skills/skills.page";
 import ExperiencePage from "./experience/experiene.page";
+import ProjectsPage from "./projects/projects.page";
+import FooterPage from "./footer/footer.page";
 
 const LandingPage = () => {
   const [shouldApplyBackground, setShouldApplyBackground] =
@@ -74,9 +76,12 @@ const LandingPage = () => {
 
         <ExperiencePage />
 
-    
-          <SkillsPage />
-     
+        <SkillsPage />
+
+        <ProjectsPage />
+
+        <FooterPage />
+        
       </Box>
     </>
   );

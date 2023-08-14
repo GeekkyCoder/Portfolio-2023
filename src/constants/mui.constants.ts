@@ -18,6 +18,10 @@ import { TabContext, TabList, TabPanel } from "@mui/lab";
 import {
   ArrowCircleDownOutlined,
   ArrowCircleUpOutlined,
+  LanguageOutlined,
+  GitHub,
+  LinkedIn,
+  Twitter,
 } from "@mui/icons-material";
 
 export {
@@ -38,4 +42,8 @@ export {
   TabContext,
   TabPanel,
   TabList,
+  LanguageOutlined,
+  GitHub,
+  LinkedIn,
+  Twitter
 };
