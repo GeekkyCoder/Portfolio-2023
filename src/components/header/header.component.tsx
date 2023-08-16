@@ -1,13 +1,17 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 import { Box, Link } from "../../constants/mui.constants";
 
 import ActiveImageSvgLink from "../../assets/linkActiveBackground.svg";
 
 import { linkStyles, List } from "./header.style";
+import { useMediaQuery } from "@mui/material";
+
 
 const Header = () => {
   const [activeLink, setActiveLink] = useState<number>(1);
+
+  const shouldShowBg = useMediaQuery("(max-width:600px)")
 
   const handleActiveLinkClick = (
     _event: React.MouseEvent<HTMLAnchorElement>,
@@ -16,12 +20,18 @@ const Header = () => {
     setActiveLink(current);
   };
 
+  useEffect(() => {
+      if(shouldShowBg){
+        setActiveLink(0)
+      }
+  },[activeLink])
+
   return (
     <Box component={"section"} id="Home">
-      <Box component={"header"}>
-        <Box component={"nav"} sx={{ padding: "2em 0" }}>
-          <List>
-            <Box component={"li"}>
+      <Box component={"header"}  height={{xs:"200px",md:"0"}} mx={{xs:"auto",md:"0em"}}>
+        <Box component={"nav"} sx={{ padding:{xs:"1em 0",md:"2em 0"},position:{xs:'relative',md:'static'} }}>
+          <List >
+            <Box component={"li"} sx={{margin:{xs:".3em 0",md:"0em"}}}>
               <Box
                 sx={{
                   position: "relative",
@@ -43,7 +53,7 @@ const Header = () => {
                 }}
               >
                 <Link
-                  sx={{ ...linkStyles, ":hover": { color: "#F44336" } }}
+                  sx={{ ...linkStyles, color:{xs:"whitesmoke",md:"#928A97"}, ":hover": { color: "#F44336" }, fontSize:{xs:"1.5rem",md:"1.3rem"},letterSpacing:{xs:"1.5px",md:"normal"},fontFamily:"League Spartan" }}
                   href="#Home"
                   onClick={(e) => handleActiveLinkClick(e, 1)}
                 >
@@ -52,7 +62,7 @@ const Header = () => {
               </Box>
             </Box>
 
-            <Box component={"li"}>
+            <Box component={"li"} sx={{margin:{xs:".3em 0",md:"0em"}}}>
               <Box
                 sx={{
                   position: "relative",
@@ -74,7 +84,7 @@ const Header = () => {
                 }}
               >
                 <Link
-                  sx={{ ...linkStyles, ":hover": { color: "#F44336" } }}
+                  sx={{ ...linkStyles, color:{xs:"whitesmoke",md:"#928A97"}, ":hover": { color: "#F44336" }, fontSize:{xs:"1.5rem",md:"1.3rem"},letterSpacing:{xs:"1.5px",md:"normal"},fontFamily:"League Spartan" }}
                   href="#About"
                   onClick={(e) => handleActiveLinkClick(e, 2)}
                 >
@@ -83,7 +93,7 @@ const Header = () => {
               </Box>
             </Box>
 
-            <Box component={"li"}>
+            <Box component={"li"} sx={{margin:{xs:".3em 0",md:"0em"}}}>
               <Box
                 sx={{
                   position: "relative",
@@ -105,7 +115,7 @@ const Header = () => {
                 }}
               >
                 <Link
-                  sx={{ ...linkStyles, ":hover": { color: "#F44336" } }}
+                  sx={{ ...linkStyles, color:{xs:"whitesmoke",md:"#928A97"}, ":hover": { color: "#F44336" }, fontSize:{xs:"1.5rem",md:"1.3rem"},letterSpacing:{xs:"1.5px",md:"normal"},fontFamily:"League Spartan" }}
                   href="#Skills"
                   onClick={(e) => handleActiveLinkClick(e, 3)}
                 >
@@ -114,7 +124,7 @@ const Header = () => {
               </Box>
             </Box>
 
-            <Box component={"li"}>
+            <Box component={"li"} sx={{margin:{xs:".3em 0",md:"0em"}}}>
               <Box
                 sx={{
                   position: "relative",
@@ -136,7 +146,7 @@ const Header = () => {
                 }}
               >
                 <Link
-                  sx={{ ...linkStyles, ":hover": { color: "#F44336" } }}
+                  sx={{ ...linkStyles, color:{xs:"whitesmoke",md:"#928A97"}, ":hover": { color: "#F44336" }, fontSize:{xs:"1.5rem",md:"1.3rem"},letterSpacing:{xs:"1.5px",md:"normal"},fontFamily:"League Spartan" }}
                   href="#Experience"
                   onClick={(e) => handleActiveLinkClick(e, 4)}
                 >
@@ -145,7 +155,7 @@ const Header = () => {
               </Box>
             </Box>
 
-            <Box component={"li"}>
+            <Box component={"li"} sx={{margin:{xs:".3em 0",md:"0em"}}}>
               <Box
                 sx={{
                   position: "relative",
@@ -167,7 +177,7 @@ const Header = () => {
                 }}
               >
                 <Link
-                  sx={{ ...linkStyles, ":hover": { color: "#F44336" } }}
+                 sx={{ ...linkStyles, color:{xs:"whitesmoke",md:"#928A97"}, ":hover": { color: "#F44336" }, fontSize:{xs:"1.5rem",md:"1.3rem"},letterSpacing:{xs:"1.5px",md:"normal"},fontFamily:"League Spartan" }}
                   href="#Projects"
                   onClick={(e) => handleActiveLinkClick(e, 5)}
                 >

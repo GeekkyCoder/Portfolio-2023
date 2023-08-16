@@ -59,7 +59,7 @@ const Footer = () => {
             </Box>
 
             <Typography
-              fontSize={"1.5rem"}
+              fontSize={{xs:"1rem",md:"1.5rem"}}
               color={"whitesmoke"}
               fontWeight={300}
               fontFamily={"League Spartan"}

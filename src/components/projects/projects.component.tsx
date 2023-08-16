@@ -16,10 +16,19 @@ import { Link } from "../about/about.style";
 import { ReactComponent as Frame } from "../../assets/frame.svg";
 import Scroll from "../scroll/scroll.component";
 
+import { useMediaQuery } from "@mui/material";
+
 const Projects = () => {
+  const shouldBeWidth100 = useMediaQuery("(max-width:600px)");
+
   return (
     <>
-      <Box ml="2em" maxWidth={"1200px"} id="Projects">
+      <Box
+        ml={{ xs: "0em", md: "2em" }}
+        maxWidth={"1200px"}
+        p={{ xs: "1em", md: "0em" }}
+        id="Projects"
+      >
         <Typography
           m={"0"}
           fontFamily={"League Spartan"}
@@ -27,6 +36,7 @@ const Projects = () => {
           fontWeight={700}
           color={"#F44336"}
           my="1em"
+          mb={{ xs: "2em", md: "0em" }}
         >
           Projects
         </Typography>
@@ -34,8 +44,13 @@ const Projects = () => {
           display={"flex"}
           justifyContent={"space-between"}
           position={"relative"}
+          flexDirection={{ xs: "column", md: "row" }}
         >
-          <Box position={"absolute"} top={"1rem"} right={"3rem"}>
+          <Box
+            position={"absolute"}
+            top={{ xs: "22rem", md: "1rem" }}
+            right={{ xs: "-2rem", md: "3rem" }}
+          >
             <Typography
               fontFamily={"League Spartan"}
               fontWeight={300}
@@ -44,11 +59,11 @@ const Projects = () => {
               Swipe to see other projects
             </Typography>
           </Box>
-          <Box width={"40%"} position={"relative"}>
+          <Box width={{ xs: "100%", md: "40%" }} position={"relative"}>
             <Box
               position={"absolute"}
-              top={"-2rem"}
-              left={"-3rem"}
+              top={{ xs: "-4rem", md: "-2rem" }}
+              left={{ xs: "0rem", md: "-3rem" }}
               zIndex={"-1"}
             >
               <Frame />
@@ -59,11 +74,12 @@ const Projects = () => {
               alt="projects-png"
             />
           </Box>
-          <Swiper style={{ width: "50%" }}>
+          <Swiper style={{ width: `${shouldBeWidth100 ? "100%" : "50%"}` }}>
             {projects.map((project) => {
               return (
                 <SwiperSlide>
                   <Typography
+                    mt={{ xs: "1.1em", md: "0em" }}
                     fontFamily={"League Spartan"}
                     fontSize="2rem"
                     fontWeight={600}
@@ -77,26 +93,36 @@ const Projects = () => {
                     fontWeight={300}
                     letterSpacing={"1px"}
                     lineHeight={"30px"}
-                    mt="1em"
+                    mt={{xs:"2em",md:"1em"}}
                   >
                     {project.description}
                   </Typography>
 
-                  <Box display={"flex"} alignItems={"center"} mt={"1em"}>
-                    <Box color={"#F44336"} fontWeight={600} fontSize={"1.3rem"}>
+                  <Box
+                    display={"flex"}
+                    alignItems={"center"}
+                    mt={"1em"}
+                    flexWrap={{ xs: "wrap", md: "nowrap" }}
+                  >
+                    <Box
+                      color={"#F44336"}
+                      fontWeight={600}
+                      fontSize={{ xs: "1.3rem", md: "1.3rem" }}
+                    >
                       Tech Stack:
                     </Box>
                     <Box
                       display={"flex"}
                       justifyContent={"space-between"}
                       alignItems={"center"}
+                      flexWrap={{ xs: "wrap", md: "nowrap" }}
                     >
                       {project.techStack.map((tech) => {
                         return (
                           <Typography
                             fontFamily={"inherit"}
-                            my="0em"
-                            ml=".5em"
+                            my={{ xs: ".2em", md: "0em" }}
+                            ml={{ xs: "1em", md: ".5em" }}
                             fontWeight={300}
                             fontSize={"1.1rem"}
                           >
@@ -130,7 +156,7 @@ const Projects = () => {
         </Box>
       </Box>
 
-      <Box ml="2em" my="3em">
+      <Box ml={{ xs: "1em", md: "2em" }} my="3em">
         <Scroll />
       </Box>
     </>

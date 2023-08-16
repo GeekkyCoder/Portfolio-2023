@@ -6,7 +6,7 @@ import {ReactComponent as Frame} from "../../assets/frame.svg"
 
 const Skills = () => {
   return (
-    <Box ml={"2em"} my={"5em"} width={"90%"} maxWidth={"1200px"} id="Skills">
+    <Box  ml={{xs:"0em",md:"2em"}} my={"5em"} width={{xs:"100%",md:"90%"}} maxWidth={{xs:"100%",md:"1200px"}} id="Skills" padding={{xs:"1em",md:"0"}}>
       <Typography
         m={"0"}
         fontFamily={"League Spartan"}
@@ -17,11 +17,11 @@ const Skills = () => {
         Skills
       </Typography>
 
-      <Box display={"flex"} justifyContent={"space-between"}>
-        <Box width={"50%"}>
+      <Box display={"flex"}  flexDirection={{xs:"column",md:"row"}}>
+        <Box width={{xs:"90%",md:"50%"}}>
           <Typography
             fontFamily={"League Spartan"}
-            fontSize={"1.5rem"}
+            fontSize={{xs:"1.5rem",md:"1.5rem"}}
             fontWeight={300}
             color={"#000C24"}
           >
@@ -35,7 +35,7 @@ const Skills = () => {
           <SkillTabs />
         </Box>
 
-        <Box width={"45%"} position={'relative'}>
+        <Box width={{xs:"100%",md:"45%"}} position={'relative'} display={{xs:"none",md:"block"}}>
           <Box position={'absolute'} top={'-4rem'} right={'-2rem'}>
            <Frame />
           </Box>

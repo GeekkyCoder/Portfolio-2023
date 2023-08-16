@@ -66,7 +66,7 @@ const SkillTabs = () => {
         </TabPanel>
       </TabContext>
 
-      <Box mt={"3em"}>
+      <Box mt={{xs:"5em",md:"3em"}} display={{xs:"none",md:"block"}}>
         <Scroll />
       </Box>
     </Box>

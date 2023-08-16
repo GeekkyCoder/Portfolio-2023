@@ -33,8 +33,9 @@ const VerticalStepper = () => {
           "& .MuiStepIcon-root.Mui-active": { color: "#F44336" },
           "& .MuiStepLabel-label.Mui-active": {
             fontFamily: "League Spartan",
-            fontSize: "2rem",
+            fontSize: {xs:"1.3rem",md:"2rem"},
             color: "#F44336",
+            fontWeight:600
           },
           "& .MuiStepIcon-text": { fill: "none" },
         }}
@@ -42,7 +43,7 @@ const VerticalStepper = () => {
         {contentSteps.map((step) => (
           <Step active expanded key={step.label} sx={{ position: "relative" }}>
             <StepLabel>{step?.label}</StepLabel>
-            <Box sx={{ position: "absolute", top: "1rem", left: "40rem" }}>
+            <Box sx={{ position: "absolute", top: {xs:"2rem",md:"1rem"}, left: {xs:"20rem",md:"40rem"}}}>
               {step?.show ? (
                 <Avatar sx={{ bgcolor: "#F44336" }}>
                   {" "}
@@ -65,13 +66,14 @@ const VerticalStepper = () => {
                 sx={{
                   display: "flex",
                   justifyContent: "space-between",
-                  margin: "1em 0",
+                  margin: {xs:"3em 0",md:"1em 0"},
+                  marginBottom:{xs:"1em",md:"3em"}
                 }}
               >
                 <Typography
                   fontFamily={"inherit"}
-                  fontSize={"1.3rem"}
-                  fontWeight={600}
+                  fontSize={{xs:"1rem",md:"1.3rem"}}
+                  fontWeight={{xs:300,md:600}}
                 >
                   {step?.location}
                 </Typography>
@@ -79,15 +81,16 @@ const VerticalStepper = () => {
                   <Typography
                     mr={"2em"}
                     fontFamily={"inherit"}
-                    fontSize={"1.3rem"}
+                    fontSize={{xs:"1rem",md:"1.3rem"}}
                     fontWeight={300}
+                    marginLeft={{xs:".5em",md:"0em"}}
                   >
-                    {step?.type}
+                    {`(${step?.type})`}
                   </Typography>
                   <Typography
                     fontFamily={"inherit"}
-                    fontSize={"1.3rem"}
-                    fontWeight={600}
+                    fontSize={{xs:"1rem",md:"1.3rem"}}
+                    fontWeight={{xs:300,md:600}}
                   >
                     {step?.duration}
                   </Typography>

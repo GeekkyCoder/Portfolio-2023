@@ -1,4 +1,4 @@
-import { Box, Button,styled } from "../../constants/mui.constants";
+import { Box, Button, styled } from "../../constants/mui.constants";
 
 export const NameTextStyles = {
   fontWeight: 800,
@@ -23,18 +23,21 @@ export const AboutFlexBoxMainTextStyles = {
 };
 
 export const AboutFlexBoxTextStyles = {
-  color:"#000C24",
-  fontFamily:"League Spartan",
-  fontSize:"1.5rem",
-  margin:"1em 0",
-  fontWeight:300,
+  color: "#000C24",
+  fontFamily: "League Spartan",
+  fontSize: "1.5rem",
+  margin: "1em 0",
+  fontWeight: 300,
 };
 
-export const SocialFlexContainer = styled(Box)`
-  width: 40%;
-  display: flex;
-  align-items: center;
-`;
+export const SocialFlexContainer = styled(Box)(({ theme }) => ({
+  width: "40%",
+  display: "flex",
+  alignItems: "center",
+  [theme.breakpoints.down("sm")]: {
+    marginTop: "2em",
+  },
+}));
 
 export const Link = styled("a")``;
 
@@ -47,30 +50,37 @@ export const SocialFlexItem = styled(Box)`
   }
 `;
 
-export const AboutFlexBox = styled(Box)`
-  display: flex;
-  justify-content: space-between;
-  width: 1000px;
-  position: relative;
-  z-index: 1000;
-`;
+export const AboutFlexBox = styled(Box)(({ theme }) => ({
+  display: "flex",
+  justifyContent: "space-between",
+  width: "1000px",
+  position: "relative",
+  zIndex: "1000",
+  [theme.breakpoints.down("sm")]: {
+    width: "100%",
+    flexDirection: "column",
+  },
+}));
 
-export const AboutFlexItemLeft = styled(Box)`
-  /* flex: 2; */
-  width: 50%;
-`;
+export const AboutFlexItemLeft = styled(Box)(({ theme }) => ({
+  width: "45%",
+  [theme.breakpoints.down("sm")]: {
+    width: "100%",
+  },
+}));
 
-export const AboutFlexItemRight = styled(Box)`
-  /* flex: 2; */
-  width: 45%;
-`;
+export const AboutFlexItemRight = styled(Box)(({ theme }) => ({
+  width: "50%",
+  [theme.breakpoints.down("sm")]: {
+    width: "100%",
+  },
+}));
 
 export const CVButton = styled(Button)`
   background-color: #000c24;
   margin: 2em 0;
   :hover {
-    background-color: #F44336;
+    background-color: #f44336;
     color: whitesmoke;
   }
 `;
-

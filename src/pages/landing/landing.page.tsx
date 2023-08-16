@@ -63,6 +63,7 @@ const LandingPage = () => {
             left: "0",
             zIndex: "2000",
             bgcolor: `${shouldApplyBackground ? "#000C24;" : "none"}`,
+            opacity:`${shouldApplyBackground ? ".7" : "1"}`,
             transition: "all ease-in-out 300ms",
           }}
         >
@@ -82,7 +83,6 @@ const LandingPage = () => {
         <ProjectsPage />
 
         <FooterPage />
-
       </Box>
     </>
   );
