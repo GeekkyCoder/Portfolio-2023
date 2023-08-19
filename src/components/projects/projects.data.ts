@@ -22,7 +22,7 @@ export const projects = [
     ],
     links: {
       github: "https://github.com/GeekkyCoder/Reader-Mern-Web-App",
-      live: "https://reader-mern-web-app-gi6y.vercel.app",
+      live: "https://reader-mern-web-app.vercel.app",
     },
   },
   {
