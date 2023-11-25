@@ -11,6 +11,7 @@ import SkillsPage from "./skills/skills.page";
 import ExperiencePage from "./experience/experiene.page";
 import ProjectsPage from "./projects/projects.page";
 import FooterPage from "./footer/footer.page";
+import TimeLine from "../../components/timeline/Timeline"
 
 const LandingPage = () => {
   const [shouldApplyBackground, setShouldApplyBackground] =
@@ -82,7 +83,11 @@ const LandingPage = () => {
 
         <ProjectsPage />
 
+        <TimeLine/>
+
         <FooterPage />
+
+      
       </Box>
     </>
   );

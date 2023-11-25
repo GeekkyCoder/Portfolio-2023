@@ -30,14 +30,13 @@ const VerticalStepper = () => {
       <Stepper
         orientation="vertical"
         sx={{
-          "& .MuiStepIcon-root.Mui-active": { color: "#F44336" },
+          "& .MuiStepIcon-root.Mui-active": { color: "#fff" },
           "& .MuiStepLabel-label.Mui-active": {
             fontFamily: "League Spartan",
-            fontSize: {xs:"1.3rem",md:"2rem"},
-            color: "#F44336",
+            color: "#fff",
             fontWeight:600
           },
-          "& .MuiStepIcon-text": { fill: "none" },
+          "& .MuiStepIcon-text": { fill: "#000" },
         }}
       >
         {contentSteps.map((step) => (
