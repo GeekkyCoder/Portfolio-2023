@@ -11,7 +11,7 @@ import SkillsPage from "./skills/skills.page";
 import ExperiencePage from "./experience/experiene.page";
 import ProjectsPage from "./projects/projects.page";
 import FooterPage from "./footer/footer.page";
-import TimeLine from "../../components/timeline/Timeline"
+import TimeLine from "../../components/timeline/Timeline";
 
 const LandingPage = () => {
   const [shouldApplyBackground, setShouldApplyBackground] =
@@ -64,7 +64,7 @@ const LandingPage = () => {
             left: "0",
             zIndex: "2000",
             bgcolor: `${shouldApplyBackground ? "#000C24;" : "none"}`,
-            opacity:`${shouldApplyBackground ? ".7" : "1"}`,
+            opacity: `${shouldApplyBackground ? ".7" : "1"}`,
             transition: "all ease-in-out 300ms",
           }}
         >
@@ -83,11 +83,9 @@ const LandingPage = () => {
 
         <ProjectsPage />
 
-        <TimeLine/>
+        <TimeLine />
 
         <FooterPage />
-
-      
       </Box>
     </>
   );
