@@ -30,18 +30,18 @@ const VerticalStepper = () => {
       <Stepper
         orientation="vertical"
         sx={{
-          "& .MuiStepIcon-root.Mui-active": { color: "#fff" },
+          "& .MuiStepIcon-root.Mui-active": { color: "#F44336" },
           "& .MuiStepLabel-label.Mui-active": {
             fontFamily: "League Spartan",
-            color: "#fff",
-            fontWeight:600
+            fontWeight:600,
+            color:"#F44336",
           },
-          "& .MuiStepIcon-text": { fill: "#000" },
+          "& .MuiStepIcon-text": { fill:"#fff" },
         }}
       >
         {contentSteps.map((step) => (
           <Step active expanded key={step.label} sx={{ position: "relative" }}>
-            <StepLabel>{step?.label}</StepLabel>
+            <StepLabel >{step?.label}</StepLabel>
             <Box sx={{ position: "absolute", top: {xs:"2rem",md:"1rem"}, left: {xs:"20rem",md:"40rem"}}}>
               {step?.show ? (
                 <Avatar sx={{ bgcolor: "#F44336" }}>
