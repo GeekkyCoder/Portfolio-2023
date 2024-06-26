@@ -13,15 +13,15 @@ export type Steps = {
 export const steps: Steps[] = [
   {
     id: 1,
-    label: "React Developer At ViaRika",
-    location: "Chicago,IL,USA",
-    type: "Remote",
-    duration: "12/2022 - 04/23",
+    label: "Frontend Developer At Core It Logics LLC",
+    location: "Karachi,Pakistan",
+    type: "Onsite",
+    duration: "06/2023 - 05/24",
     description1: `Contributed to the design and implementation of front- end architectures using ReactJS. By employing best
       practices such as modularization, code reusability, and
       efficient data flow management.
                 `,
-    description2: `Utilized Redux or similar state management libraries, effectively managed complex application states, ensuring data consistency across components. also
+    description2: `Utilized Redux,Flux or similar state management libraries, effectively managed complex application states, ensuring data consistency across components. also
       integrated Redux middleware and implemented
       asynchronous actions to handle API requests and data
       fetching.`,
@@ -35,10 +35,20 @@ export const steps: Steps[] = [
   },
   {
     id: 2,
-    label: "UI/UX Developer Intern At Artive",
+    label: "React Developer Intern At Hostelin",
+    location: "Hyderabad,Pakistan",
+    type: "Onsite",
+    duration: "08/2022 - 01/2023",
+    description1: `During my employment as a React developer At Hostelin, I had the invaluable opportunity to immerse myself in the world of web development and gain practical experience working with one of the most popular JavaScript libraries.`,
+    description2: `One of the highlights of my role was diving into the intricacies of React's component-based architecture. I became proficient in breaking down complex user interfaces into smaller, reusable components, fostering a modular and efficient development approach.`,
+    show: true,
+  },
+  {
+    id: 3,
+    label: "UI/Ux Developer At Artive",
     location: "Budapest,Hungry",
-    type: "Remote",
-    duration: "10/2022 - 03/2023",
+    type: "Internship (Remote)",
+    duration: "09/2022 - 01/2023",
     description1: `Creating thoughtful user experiences, and converting
         them into a visual form, combined strong concepting
         skills with creative design & execution.`,
@@ -51,13 +61,13 @@ export const steps: Steps[] = [
     show: true,
   },
   {
-    id: 3,
-    label: "React Developer Intern At Hostelin",
-    location: "Jamshoro,Pakistan",
-    type: "Onsite",
-    duration: "10/2022 - 30/2022",
-    description1: `During my internship as a React developer At Hostelin, I had the invaluable opportunity to immerse myself in the world of web development and gain practical experience working with one of the most popular JavaScript libraries.`,
-    description2: `One of the highlights of my internship was diving into the intricacies of React's component-based architecture. I became proficient in breaking down complex user interfaces into smaller, reusable components, fostering a modular and efficient development approach.`,
+    id: 4,
+    label: "React Developer At ViaRika",
+    location: "Chicago,IL,USA",
+    type: "Contract (Remote)",
+    duration: "09/2022 - 01/2023",
+    description1: `Worked With ViaRika as a React Developer to make a video editor web app for the company.`,
+    description2: `The Purpose of video editor was only to be used by the site admins to edit their videos, i also made the ViaRika's site landing page and improved the UI of overall website by using tools like lighthouse and code spilliting/chunking using webpack to reduce to javascript files bundle size.`,
     show: true,
   },
 ];

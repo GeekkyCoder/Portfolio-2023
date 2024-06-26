@@ -64,7 +64,7 @@ const Footer = () => {
               fontWeight={300}
               fontFamily={"League Spartan"}
             >
-              All Rights Reserved &#169; 2023
+              All Rights Reserved &#169; {new Date().getFullYear()}
             </Typography>
           </Box>
         </Box>

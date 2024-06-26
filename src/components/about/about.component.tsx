@@ -21,6 +21,8 @@ import { ReactComponent as TwitterIcon } from "../../assets/ant-design_twitter-c
 import { ReactComponent as GithubIcon } from "../../assets/ant-design_github-filled.svg";
 import { ReactComponent as LinkedinIcon } from "../../assets/entypo-social_linkedin-with-circle.svg";
 import { ReactComponent as HackerRank } from "../../assets/hackerrank.svg";
+import { ReactComponent as Youtube } from "../../assets/youtube.svg";
+
 
 import { ReactComponent as Frame } from "../../assets/frame.svg";
 
@@ -93,6 +95,18 @@ const isXs = useMediaQuery("(max-width:600px)")
             />
           </Link>
         </SocialFlexItem>
+        <SocialFlexItem>
+          <Link
+            href="https://www.youtube.com/@SpaghettiCode-xv2zw"
+            target="__blank"
+          >
+            <Youtube
+              width={"40px"}
+              height={"40px"}
+              style={{ borderRadius: "50%", filter: "grayscale(100%)" }}
+            />
+          </Link>
+        </SocialFlexItem>
       </SocialFlexContainer>
 
       <Box sx={{ marginTop: {xs:"22em",md:"18em"}, marginLeft:{xs:"0em",md:"5em"} }}>
@@ -130,20 +144,15 @@ const isXs = useMediaQuery("(max-width:600px)")
             </Typography>
 
             <Typography mt={"1em"} component={"p"} sx={AboutFlexBoxTextStyles}>
-              An inquisitive Computer Science graduate and a passionate Full
-              Stack Mern Web Developer , Always eager to learn new technologies
-              and research about new technologies, having 1.5 year of experience
-              with web development , I learnt a ton of new frameworks and
-              libraries and eventually used them in my each projects, i can
-              adopt and learn new things quickly!
+             Full Stack Developer with over 2 years of experience in Frontend development and Bechlor's in Computer Science, distinguised for colloborative skills and track of independently delivering impactful results. Ample experince in Frontend developmen,delivering well-documented, tested and operable code. Efficient in collaborating new ideas and opinions.
             </Typography>
 
             <Link
-              href="https://drive.google.com/file/d/1Q16S9GiFI4fIdX6Ijb1pJqOr2RzoXWR1/view?usp=drive_link"
-              download={"./Full Stack Web Developer.pdf"}
+              href="https://drive.google.com/file/d/1DllS9kGisRNko-gMuQuyVBKKb3x_PCQt/view?usp=sharing"
+              download={"./FarazAhmed-Software_Engineer.pdf"}
               target="__blank"
             >
-              <CVButton variant="contained">Download CV</CVButton>
+              <CVButton variant="contained">Download Resume</CVButton>
             </Link>
           </AboutFlexItemRight>
         </AboutFlexBox>
