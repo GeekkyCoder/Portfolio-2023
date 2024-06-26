@@ -35,7 +35,7 @@ export const steps: Steps[] = [
   },
   {
     id: 2,
-    label: "React Developer Intern At Hostelin",
+    label: "React Developer At Hostelin",
     location: "Hyderabad,Pakistan",
     type: "Onsite",
     duration: "08/2022 - 01/2023",
