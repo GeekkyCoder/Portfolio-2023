@@ -11,6 +11,7 @@ import {
   StepContent,
   Avatar,
   Tab,
+  Tooltip,
 } from "@mui/material";
 
 import { TabContext, TabList, TabPanel } from "@mui/lab";
@@ -22,6 +23,7 @@ import {
   GitHub,
   LinkedIn,
   Twitter,
+  YouTube,
 } from "@mui/icons-material";
 
 export {
@@ -39,11 +41,13 @@ export {
   ArrowCircleUpOutlined,
   Avatar,
   Tab,
+  Tooltip,
   TabContext,
   TabPanel,
   TabList,
   LanguageOutlined,
   GitHub,
   LinkedIn,
-  Twitter
+  Twitter,
+  YouTube,
 };

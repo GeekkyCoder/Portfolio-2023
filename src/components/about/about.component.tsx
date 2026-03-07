@@ -15,8 +15,6 @@ import {
 
 import Typewriter from "typewriter-effect";
 
-import { useMediaQuery } from "@mui/material";
-
 import { ReactComponent as TwitterIcon } from "../../assets/ant-design_twitter-circle-filled.svg";
 import { ReactComponent as GithubIcon } from "../../assets/ant-design_github-filled.svg";
 import { ReactComponent as LinkedinIcon } from "../../assets/entypo-social_linkedin-with-circle.svg";
@@ -30,8 +28,6 @@ import Scroll from "../scroll/scroll.component";
 
 const About = () => {
 
-
-const isXs = useMediaQuery("(max-width:600px)")
 
   return (
     <Box
@@ -51,7 +47,7 @@ const isXs = useMediaQuery("(max-width:600px)")
         <Typewriter
           options={{
             strings: [
-              "Iam a Full Stack Mern Web Developer",
+              "Software Engineer",
               "5 ⭐ Problem Solver On HackerRank",
             ],
             autoStart: true,
@@ -109,7 +105,7 @@ const isXs = useMediaQuery("(max-width:600px)")
         </SocialFlexItem>
       </SocialFlexContainer>
 
-      <Box sx={{ marginTop: {xs:"22em",md:"18em"}, marginLeft:{xs:"0em",md:"5em"} }}>
+      <Box sx={{ marginTop: {xs:"22em",md:"28em"}, marginLeft:{xs:"0em",md:"5em"} }}>
         <AboutFlexBox>
           <Box sx={{ position: "absolute", top: {xs:"-10rem",md:"-10rem"}, left: {xs:"0rem",md:"-3rem"} }}>
             <Scroll />
@@ -126,11 +122,11 @@ const isXs = useMediaQuery("(max-width:600px)")
             <Frame />
           </Box>
           <AboutFlexItemLeft>
-            <img
+            {/* <img
               style={{ height: `${isXs ? "300px" : "400px"}`, objectFit: "cover" }}
               src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/03fdb466-60c7-4df2-8aeb-8f9f008d2afa/db8o23g-c69fffc4-ad01-4d0a-8add-832de1a26de7.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzAzZmRiNDY2LTYwYzctNGRmMi04YWViLThmOWYwMDhkMmFmYVwvZGI4bzIzZy1jNjlmZmZjNC1hZDAxLTRkMGEtOGFkZC04MzJkZTFhMjZkZTcuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.u2KXFJm5O_QWDqHAScT-QTWe_pwrUaCubl4UMxl1Gw0"
               alt="about-me"
-            />
+            /> */}
           </AboutFlexItemLeft>
 
           <AboutFlexItemRight>

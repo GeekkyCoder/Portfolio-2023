@@ -1,0 +1,1 @@
+const t={hidden:{},show:{transition:{staggerChildren:.08}}},s={hidden:{opacity:0,y:14},show:{opacity:1,y:0,transition:{duration:.4,ease:[.21,.61,.35,1]}}},a={rest:{y:0,scale:1,transition:{duration:.2}},hover:{y:-6,scale:1.02,transition:{duration:.2}}};export{s as f,a as h,t as s};

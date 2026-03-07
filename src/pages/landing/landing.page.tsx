@@ -1,93 +1,123 @@
-import { useEffect, useState } from "react";
+import { lazy, Suspense } from "react";
 
-import AboutPage from "./about/about.page";
-import HeaderPage from "./header/header.page";
+import { Box, Typography } from "../../constants/mui.constants";
 
-import { Box } from "../../constants/mui.constants";
+import SiteHeader from "../../components/workspace/site-header.component";
+import Hero from "../../components/workspace/hero.component";
 
-import LandingPageSvg from "../../assets/landing-bg.svg";
-import { CenterContainer } from "../../components/header/header.style";
-import SkillsPage from "./skills/skills.page";
-import ExperiencePage from "./experience/experiene.page";
-import ProjectsPage from "./projects/projects.page";
-import FooterPage from "./footer/footer.page";
-import TimeLine from "../../components/timeline/Timeline";
+const AboutWorkspace = lazy(() => import("../../components/workspace/about-workspace.component"));
+const TechStack = lazy(() => import("../../components/workspace/tech-stack.component"));
+const ProjectsWorkspace = lazy(() => import("../../components/workspace/projects-workspace.component"));
+// const YoutubeWorkspace = lazy(() => import("../../components/workspace/youtube-workspace.component"));
+const GitHubGraphWorkspace = lazy(() => import("../../components/workspace/github-graph-workspace.component"));
+const ExperienceWorkspace = lazy(() => import("../../components/workspace/experience-workspace.component"));
+const ContactWorkspace = lazy(() => import("../../components/workspace/contact-workspace.component"));
 
-const LandingPage = () => {
-  const [shouldApplyBackground, setShouldApplyBackground] =
-    useState<boolean>(false);
+type SectionFallbackProps = {
+  id: string;
+  title: string;
+};
 
-  useEffect(() => {
-    const handleScroll = (): void => {
-      let scrolledY: number = window.scrollY;
-      if (scrolledY > 200) {
-        setShouldApplyBackground(true);
-      } else {
-        setShouldApplyBackground(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
+const SectionFallback = ({ id, title }: SectionFallbackProps) => {
   return (
-    <>
+    <Box component="section" id={id} sx={{ position: "relative" }}>
       <Box
-        component={"main"}
-        className="landing-page"
-        id="Home"
         sx={{
-          position: "relative",
-          "::before": {
-            content: '""',
-            backgroundImage: `url(${LandingPageSvg})`,
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "contain",
-            backgroundSize: "cover",
-            height: "1200px",
-            width: "100%",
-            position: "absolute",
-            top: "0",
-            left: "0",
-            zIndex: "-1",
+          width: "100%",
+          maxWidth: "1120px",
+          mx: "auto",
+          px: 2,
+          py: 7,
+          "@media (min-width: 480px)": {
+            px: 2.5,
+          },
+          "@media (min-width: 1024px)": {
+            px: 3,
+            py: 10,
           },
         }}
       >
-        <Box
+        <Typography
+          className="mono"
           sx={{
-            position: "sticky",
-            top: "0",
-            left: "0",
-            zIndex: "2000",
-            bgcolor: `${shouldApplyBackground ? "#000C24;" : "none"}`,
-            opacity: `${shouldApplyBackground ? ".7" : "1"}`,
-            transition: "all ease-in-out 300ms",
+            color: "var(--muted)",
+            fontSize: "clamp(0.85rem, 1.8vw, 1rem)",
+            letterSpacing: "0.06em",
+            textTransform: "uppercase",
+            mb: 1,
           }}
         >
-          <CenterContainer>
-            <HeaderPage />
-          </CenterContainer>
+          loading
+        </Typography>
+
+        <Typography
+          component="h2"
+          sx={{
+            fontSize: "clamp(1.85rem, 4.8vw, 3rem)",
+            fontWeight: 800,
+            lineHeight: 1.05,
+            mb: { xs: 2.5, md: 3 },
+          }}
+        >
+          <Box component="span" sx={{ color: "var(--accent)" }}>
+            //
+          </Box>{" "}
+          {title}
+        </Typography>
+
+        <Box
+          sx={{
+            border: "1px solid var(--border)",
+            borderRadius: "16px",
+            background: "rgba(255,255,255,0.04)",
+            p: 2.5,
+          }}
+        >
+          <Typography className="mono" sx={{ color: "var(--muted)" }}>
+            {"> "}Loading section...
+          </Typography>
         </Box>
-
-        <CenterContainer>
-          <AboutPage />
-        </CenterContainer>
-
-        <ExperiencePage />
-
-        <SkillsPage />
-
-        <ProjectsPage />
-
-        <TimeLine />
-
-        <FooterPage />
       </Box>
-    </>
+    </Box>
+  );
+};
+
+const LandingPage = () => {
+  return (
+    <Box component={"main"} sx={{ position: "relative" }}>
+      <SiteHeader />
+      <Hero />
+
+      <Suspense fallback={<SectionFallback id="About" title="About" />}>
+        <AboutWorkspace />
+      </Suspense>
+
+      <Suspense fallback={<SectionFallback id="Tech" title="Tech Stack" />}>
+        <TechStack />
+      </Suspense>
+
+      <Suspense fallback={<SectionFallback id="Projects" title="Projects" />}>
+        <ProjectsWorkspace />
+      </Suspense>
+
+      {/*
+      <Suspense fallback={<SectionFallback id="Videos" title="Videos" />}>
+        <YoutubeWorkspace />
+      </Suspense>
+      */}
+
+      <Suspense fallback={<SectionFallback id="GitHub" title="GitHub Graph" />}>
+        <GitHubGraphWorkspace />
+      </Suspense>
+
+      <Suspense fallback={<SectionFallback id="Experience" title="Experience / Achievements" />}>
+        <ExperienceWorkspace />
+      </Suspense>
+
+      <Suspense fallback={<SectionFallback id="Contact" title="Contact" />}>
+        <ContactWorkspace />
+      </Suspense>
+    </Box>
   );
 };
 

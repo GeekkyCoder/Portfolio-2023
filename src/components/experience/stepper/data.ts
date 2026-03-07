@@ -6,6 +6,8 @@ export type Steps = {
   description1?: string;
   description2?: string;
   description3?: string;
+  description4?: string;
+  description5?: string;
   duration: string;
   show: boolean;
 };
@@ -13,51 +15,48 @@ export type Steps = {
 export const steps: Steps[] = [
   {
     id: 1,
+    label: "Software Engineer At Paysys Labs",
+    location: "Karachi,Pakistan",
+    show: true,
+    type: "Onsite",
+    duration: "07/2024 - Present",
+    description1:
+      "Designed and shipped a secure merchant onboarding workflow with maker-checker + bank-approver roles, improving auditability and reducing operational risk.",
+    description2:
+      "Built and maintained production terminal integrations (POS, SoftPOS, RaastQR, Soundbox), focusing on reliability, clear error handling, and smooth rollout across environments.",
+    description3:
+      "Delivered core payments features including P2M transactions, MDR management, and bulk merchant onboarding—streamlining internal operations and enabling faster merchant activation.",
+    description4:
+      "Rebuilt the merchant portal from the ground up (React) with a scalable component architecture, consistent UX patterns, and maintainable state/data flow.",
+    description5:
+      "Implemented POS transaction modules, operational dashboards, RTP transaction flows, and bulk RTP imports with a focus on correctness, performance, and operator usability.",
+  },
+  {
+    id: 2,
     label: "Frontend Developer At Core It Logics LLC",
     location: "Karachi,Pakistan",
     type: "Onsite",
     duration: "06/2023 - 05/24",
-    description1: `Contributed to the design and implementation of front- end architectures using ReactJS. By employing best
-      practices such as modularization, code reusability, and
-      efficient data flow management.
-                `,
-    description2: `Utilized Redux,Flux or similar state management libraries, effectively managed complex application states, ensuring data consistency across components. also
-      integrated Redux middleware and implemented
-      asynchronous actions to handle API requests and data
-      fetching.`,
-
-    description3: `Optimized apps for better performance by implementing
-                techniques such as code splitting, lazy loading, and
-                memoization. I have also employed performance profiling
-                tools to identify bottlenecks and enhance overall
-                application speed and responsiveness.`,
-    show: true,
-  },
-  {
-    id: 2,
-    label: "React Developer At Hostelin",
-    location: "Hyderabad,Pakistan",
-    type: "Onsite",
-    duration: "08/2022 - 01/2023",
-    description1: `During my employment as a React developer At Hostelin, I had the invaluable opportunity to immerse myself in the world of web development and gain practical experience working with one of the most popular JavaScript libraries.`,
-    description2: `One of the highlights of my role was diving into the intricacies of React's component-based architecture. I became proficient in breaking down complex user interfaces into smaller, reusable components, fostering a modular and efficient development approach.`,
+    description1:
+      "Helped design and implement scalable React front-end architecture with modular, reusable components and predictable data flow—making features easier to ship and maintain.",
+    description2:
+      "Owned complex UI state using Redux/Flux-style patterns, middleware, and async actions—keeping data consistent across screens while integrating APIs cleanly.",
+    description3:
+      "Improved performance through code splitting, lazy loading, memoization, and profiling—reducing UI jank and improving overall responsiveness.",
     show: true,
   },
   {
     id: 3,
     label: "UI/Ux Developer At Artive",
-    location: "Budapest,Hungry",
+    location: "Budapest,Hungary",
     type: "Internship (Remote)",
     duration: "09/2022 - 01/2023",
-    description1: `Creating thoughtful user experiences, and converting
-        them into a visual form, combined strong concepting
-        skills with creative design & execution.`,
-    description2: `Visualizing, designing, and conceptualizing user
-      experiences. This includes information design hierarchy, process/screen flows, concept sketches, annotated
-      wireframes, interactive prototypes, high fidelity visual
-      mockups, and optimized graphics production.`,
-    description3: `Communicating design strategy, rationale, and
-      perspective and presenting UX and UI design concept.`,
+    description1:
+      "Crafted user-centric UI/UX concepts and translated them into clear, high-fidelity designs that improved usability and visual consistency.",
+    description2:
+      "Produced flows, annotated wireframes, interactive prototypes, and polished mockups—supporting faster iteration and clearer cross-team alignment.",
+    description3:
+      "Presented design rationale and tradeoffs to stakeholders, ensuring feedback was actionable and decisions were documented.",
     show: true,
   },
   {
@@ -66,8 +65,12 @@ export const steps: Steps[] = [
     location: "Chicago,IL,USA",
     type: "Contract (Remote)",
     duration: "09/2022 - 01/2023",
-    description1: `Worked With ViaRika as a React Developer to make a video editor web app for the company.`,
-    description2: `The Purpose of video editor was only to be used by the site admins to edit their videos, i also made the ViaRika's site landing page and improved the UI of overall website by using tools like lighthouse and code spilliting/chunking using webpack to reduce to javascript files bundle size.`,
+    description1:
+      "Built an internal admin video editor web app that enabled non-technical users to edit and publish videos with a smoother workflow.",
+    description2: `Implemented core editor features (trim, merge, overlays/text, timeline controls) with predictable state updates after each edit.
+• Delivered Cloudinary upload pipeline for edited videos with progress indicators and resilient error handling
+• Implemented authentication + password reset flows for secure access
+• Tools: React, Node.js, FFMPEG, Cloudinary APIs, JavaScript`,
     show: true,
   },
 ];
