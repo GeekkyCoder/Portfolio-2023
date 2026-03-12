@@ -8,6 +8,7 @@ export type Steps = {
   description3?: string;
   description4?: string;
   description5?: string;
+  description6?: string;
   duration: string;
   show: boolean;
 };
@@ -20,15 +21,16 @@ export const steps: Steps[] = [
     show: true,
     type: "Onsite",
     duration: "07/2024 - Present",
-    description1:
-      "Designed and shipped a secure merchant onboarding workflow with maker-checker + bank-approver roles, improving auditability and reducing operational risk.",
+    description1:"Optimized a large React-based merchant onboarding form by implementing custom client-side caching for constant APIs/LOVs, reducing load time from ~10–15 seconds to near-instant and improving onboarding performance and user experience.",
     description2:
-      "Built and maintained production terminal integrations (POS, SoftPOS, RaastQR, Soundbox), focusing on reliability, clear error handling, and smooth rollout across environments.",
+      "Designed and shipped a secure merchant onboarding workflow with maker-checker + bank-approver roles, improving auditability and reducing operational risk.",
     description3:
-      "Delivered core payments features including P2M transactions, MDR management, and bulk merchant onboarding—streamlining internal operations and enabling faster merchant activation.",
+      "Built and maintained production terminal integrations (POS, SoftPOS, RaastQR, Soundbox), focusing on reliability, clear error handling, and smooth rollout across environments.",
     description4:
-      "Rebuilt the merchant portal from the ground up (React) with a scalable component architecture, consistent UX patterns, and maintainable state/data flow.",
+      "Delivered core payments features including P2M transactions, MDR management, and bulk merchant onboarding—streamlining internal operations and enabling faster merchant activation.",
     description5:
+      "Rebuilt the merchant portal from the ground up (React) with a scalable component architecture, consistent UX patterns, and maintainable state/data flow.",
+    description6:
       "Implemented POS transaction modules, operational dashboards, RTP transaction flows, and bulk RTP imports with a focus on correctness, performance, and operator usability.",
   },
   {
@@ -59,18 +61,18 @@ export const steps: Steps[] = [
       "Presented design rationale and tradeoffs to stakeholders, ensuring feedback was actionable and decisions were documented.",
     show: true,
   },
-  {
-    id: 4,
-    label: "React Developer At ViaRika",
-    location: "Chicago,IL,USA",
-    type: "Contract (Remote)",
-    duration: "09/2022 - 01/2023",
-    description1:
-      "Built an internal admin video editor web app that enabled non-technical users to edit and publish videos with a smoother workflow.",
-    description2: `Implemented core editor features (trim, merge, overlays/text, timeline controls) with predictable state updates after each edit.
-• Delivered Cloudinary upload pipeline for edited videos with progress indicators and resilient error handling
-• Implemented authentication + password reset flows for secure access
-• Tools: React, Node.js, FFMPEG, Cloudinary APIs, JavaScript`,
-    show: true,
-  },
+//   {
+//     id: 4,
+//     label: "React Developer At ViaRika",
+//     location: "Chicago,IL,USA",
+//     type: "Contract (Remote)",
+//     duration: "09/2022 - 01/2023",
+//     description1:
+//       "Built an internal admin video editor web app that enabled non-technical users to edit and publish videos with a smoother workflow.",
+//     description2: `Implemented core editor features (trim, merge, overlays/text, timeline controls) with predictable state updates after each edit.
+// • Delivered Cloudinary upload pipeline for edited videos with progress indicators and resilient error handling
+// • Implemented authentication + password reset flows for secure access
+// • Tools: React, Node.js, FFMPEG, Cloudinary APIs, JavaScript`,
+//     show: true,
+//   },
 ];
