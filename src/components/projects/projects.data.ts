@@ -15,7 +15,7 @@ export const projects = [
     ],
     links: {
       github: "https://github.com/GeekkyCoder/DocSync",
-      live: "https://github.com/GeekkyCoder/DocSync",
+      live: "https://doc-sync-chi.vercel.app/",
     },
   },
   {
