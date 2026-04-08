@@ -23,11 +23,8 @@ export const steps: Steps[] = [
     duration: "07/2024 - Present",
     description1:"Optimized a large React-based merchant onboarding form by implementing custom client-side caching for constant APIs/LOVs, reducing load time from ~10–15 seconds to near-instant and improving onboarding performance and user experience.",
     description2:
-      "Optimized API request handling using concurrency-controlled batching, reducing concurrent API calls by ~90% and improving reliability and consistency of data fetching",
-    description3:
-      "Built and maintained production terminal integrations (POS, SoftPOS, RaastQR, Soundbox), focusing on reliability, clear error handling, and smooth rollout across environments.",
-    description4:
-      "Rebuilt the merchant portal from the ground up (React 19) with a scalable component architecture, consistent UX patterns, and maintainable state/data flow.",
+      "Implemented concurrency-controlled batching, reducing concurrent API calls by ~90% and improving reliability",
+    description3:"Rebuilt the merchant portal from the ground up (React 19) with a scalable component architecture, consistent UX patterns, and maintainable state/data flow.",
   },
   {
     id: 2,
